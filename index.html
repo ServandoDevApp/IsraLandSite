@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspección Arquitectónica Pro | Revisión Profesional de Inmuebles</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-hard-hat"></i>
+                <span>ArquiCheck</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="badge">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Inspección Profesional Certificada</span>
+                </div>
+                <h1 class="hero-title">
+                    Tu propiedad perfecta,<br>
+                    <span class="highlight">verificada al detalle</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Inspeccionamos tu casa o edificio en el momento de la entrega. 
+                    Detectamos defectos constructivos antes de que firmes la escritura.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">
+                        <span>Agendar Inspección</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#servicios" class="btn btn-secondary">
+                        <span>Ver Servicios</span>
+                        <i class="fas fa-list-ul"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Inspecciones</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-suffix">%</span>
+                        <span class="stat-label">Satisfacción</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-suffix">+</span>
+                        <span class="stat-label">Años Exp.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Animated Building Inspection -->
+                <div class="inspection-scene">
+                    <div class="building">
+                        <div class="building-base">
+                            <div class="floor floor-3">
+                                <div class="window"></div>
+                                <div class="window"></div>
+                                <div class="window"></div>
+                            </div>
+                            <div class="floor floor-2">
+                                <div class="window"></div>
+                                <div class="window"></div>
+                                <div class="window"></div>
+                            </div>
+                            <div class="floor floor-1">
+                                <div class="door"></div>
+                                <div class="window"></div>
+                            </div>
+                        </div>
+                        <div class="roof"></div>
+                    </div>
+                    <div class="magnifying-glass">
+                        <div class="glass"></div>
+                        <div class="handle"></div>
+                    </div>
+                    <div class="checkmarks">
+                        <div class="checkmark check-1"><i class="fas fa-check"></i></div>
+                        <div class="checkmark check-2"><i class="fas fa-check"></i></div>
+                        <div class="checkmark check-3"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Desplázate</span>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Servicios</span>
+                <h2 class="section-title">¿Qué inspeccionamos?</h2>
+                <p class="section-desc">
+                    Realizamos una revisión exhaustiva de cada elemento constructivo 
+                    para garantizar que tu inversión esté protegida.
+                </p>
+            </div>
+
+            <div class="servicios-grid">
+                <!-- Pisos -->
+                <div class="servicio-card" data-servicio="pisos">
+                    <div class="servicio-icon">
+                        <div class="icon-animation floor-animation">
+                            <div class="tile-grid">
+                                <div class="tile"></div>
+                                <div class="tile"></div>
+                                <div class="tile"></div>
+                                <div class="tile"></div>
+                                <div class="tile center"></div>
+                                <div class="tile"></div>
+                                <div class="tile"></div>
+                                <div class="tile"></div>
+                                <div class="tile"></div>
+                            </div>
+                            <div class="level-bubble">
+                                <div class="bubble-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Pisos y Revestimientos</h3>
+                    <p>
+                        Verificamos que los pisos estén correctamente pegados, nivelados, 
+                        sin burbujas ni desprendimientos. Revisamos fisuras, desniveles y terminaciones.
+                    </p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Adherencia de cerámica</li>
+                        <li><i class="fas fa-check-circle"></i> Nivelación correcta</li>
+                        <li><i class="fas fa-check-circle"></i> Sin fisuras ni burbujas</li>
+                        <li><i class="fas fa-check-circle"></i> Juntas uniformes</li>
+                    </ul>
+                </div>
+
+                <!-- Electricidad -->
+                <div class="servicio-card" data-servicio="electricidad">
+                    <div class="servicio-icon">
+                        <div class="icon-animation electric-animation">
+                            <div class="outlet">
+                                <div class="socket"></div>
+                            </div>
+                            <div class="plug">
+                                <div class="prongs"></div>
+                            </div>
+                            <div class="sparkles">
+                                <div class="spark spark-1"></div>
+                                <div class="spark spark-2"></div>
+                                <div class="spark spark-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Instalación Eléctrica</h3>
+                    <p>
+                        Comprobamos que todos los contactos, interruptores y luminarias 
+                        funcionen correctamente. Verificamos polaridad, tierras y capacidad.
+                    </p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Funcionamiento de contactos</li>
+                        <li><i class="fas fa-check-circle"></i> Polaridad correcta</li>
+                        <li><i class="fas fa-check-circle"></i> Conexión a tierra</li>
+                        <li><i class="fas fa-check-circle"></i> Interruptores y lámparas</li>
+                    </ul>
+                </div>
+
+                <!-- Tuberías -->
+                <div class="servicio-card" data-servicio="tuberias">
+                    <div class="servicio-icon">
+                        <div class="icon-animation pipe-animation">
+                            <div class="pipe-system">
+                                <div class="pipe pipe-h"></div>
+                                <div class="pipe pipe-v"></div>
+                                <div class="pipe-connector"></div>
+                            </div>
+                            <div class="water-drop"></div>
+                            <div class="water-flow">
+                                <div class="flow-particle p1"></div>
+                                <div class="flow-particle p2"></div>
+                                <div class="flow-particle p3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Tuberías y Desagües</h3>
+                    <p>
+                        Inspeccionamos que las tuberías no estén tapadas, con fugas o mal selladas. 
+                        Verificamos presión de agua y flujo de desagües en cocinas y baños.
+                    </p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Flujo de agua correcto</li>
+                        <li><i class="fas fa-check-circle"></i> Sin fugas ni goteos</li>
+                        <li><i class="fas fa-check-circle"></i> Desagües sin obstrucciones</li>
+                        <li><i class="fas fa-check-circle"></i> Presión adecuada</li>
+                    </ul>
+                </div>
+
+                <!-- Ethernet/Redes -->
+                <div class="servicio-card" data-servicio="redes">
+                    <div class="servicio-icon">
+                        <div class="icon-animation network-animation">
+                            <div class="network-box">
+                                <div class="port"></div>
+                                <div class="port"></div>
+                            </div>
+                            <div class="cable">
+                                <div class="cable-end"></div>
+                            </div>
+                            <div class="data-packets">
+                                <div class="packet pkt-1"></div>
+                                <div class="packet pkt-2"></div>
+                                <div class="packet pkt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Cableado de Red</h3>
+                    <p>
+                        Confirmamos que los canales de Ethernet estén cerrados, 
+                        etiquetados y funcionando. Verificamos conectividad en cada punto.
+                    </p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Canales cerrados</li>
+                        <li><i class="fas fa-check-circle"></i> Conectividad probada</li>
+                        <li><i class="fas fa-check-circle"></i> Cableado organizado</li>
+                        <li><i class="fas fa-check-circle"></i> Etiquetado correcto</li>
+                    </ul>
+                </div>
+
+                <!-- Yeso/Paredes -->
+                <div class="servicio-card" data-servicio="yeso">
+                    <div class="servicio-icon">
+                        <div class="icon-animation wall-animation">
+                            <div class="wall-section">
+                                <div class="wall-layer base"></div>
+                                <div class="wall-layer finish"></div>
+                            </div>
+                            <div class="trowel">
+                                <div class="blade"></div>
+                                <div class="handle-tool"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Acabados y Yeso</h3>
+                    <p>
+                        Revisamos que el yeso esté bien parejo, sin burbujas, grietas 
+                        o manchas. Verificamos alineación de paredes y calidad de pintura.
+                    </p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Superficie pareja</li>
+                        <li><i class="fas fa-check-circle"></i> Sin grietas ni burbujas</li>
+                        <li><i class="fas fa-check-circle"></i> Alineación de paredes</li>
+                        <li><i class="fas fa-check-circle"></i> Calidad de pintura</li>
+                    </ul>
+                </div>
+
+                <!-- Puertas y Ventanas -->
+                <div class="servicio-card" data-servicio="puertas">
+                    <div class="servicio-icon">
+                        <div class="icon-animation door-animation">
+                            <div class="door-frame">
+                                <div class="door-panel">
+                                    <div class="door-knob"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Puertas y Ventanas</h3>
+                    <p>
+                        Comprobamos que abran y cierren correctamente, con bisagras bien 
+                        ajustadas, sellos herméticos y vidrios sin defectos.
+                    </p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Apertura y cierre suave</li>
+                        <li><i class="fas fa-check-circle"></i> Bisagras y cerraduras</li>
+                        <li><i class="fas fa-check-circle"></i> Sellos herméticos</li>
+                        <li><i class="fas fa-check-circle"></i> Vidrios sin defectos</li>
+                    </ul>
+                </div>
+
+                <!-- Techos -->
+                <div class="servicio-card" data-servicio="techos">
+                    <div class="servicio-icon">
+                        <div class="icon-animation roof-animation">
+                            <div class="ceiling">
+                                <div class="ceiling-tile"></div>
+                                <div class="ceiling-tile"></div>
+                                <div class="ceiling-tile"></div>
+                            </div>
+                            <div class="inspection-light"></div>
+                            <div class="rain-drop rd-1"></div>
+                            <div class="rain-drop rd-2"></div>
+                        </div>
+                    </div>
+                    <h3>Techos y Cubiertas</h3>
+                    <p>
+                        Inspeccionamos filtraciones, goteras, estado de cielo raso y 
+                        estructura del techo. Detectamos humedades y puntos de riesgo.
+                    </p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Sin filtraciones</li>
+                        <li><i class="fas fa-check-circle"></i> Cielo raso íntegro</li>
+                        <li><i class="fas fa-check-circle"></i> Estructura sólida</li>
+                        <li><i class="fas fa-check-circle"></i> Sin humedades</li>
+                    </ul>
+                </div>
+
+                <!-- Baños y Cocinas -->
+                <div class="servicio-card" data-servicio="banos">
+                    <div class="servicio-icon">
+                        <div class="icon-animation bath-animation">
+                            <div class="sink">
+                                <div class="basin"></div>
+                                <div class="faucet">
+                                    <div class="faucet-neck"></div>
+                                </div>
+                            </div>
+                            <div class="water-stream"></div>
+                        </div>
+                    </div>
+                    <h3>Baños y Cocinas</h3>
+                    <p>
+                        Revisión integral de grifería, sellos de silicona, desagües, 
+                        muebles y accesorios. Verificamos estanqueidad y funcionamiento.
+                    </p>
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Grifería funcional</li>
+                        <li><i class="fas fa-check-circle"></i> Sellos estancos</li>
+                        <li><i class="fas fa-check-circle"></i> Desagües rápidos</li>
+                        <li><i class="fas fa-check-circle"></i> Muebles bien fijados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso Section -->
+    <section id="proceso" class="proceso">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Cómo Trabajamos</span>
+                <h2 class="section-title">Proceso de Inspección</h2>
+                <p class="section-desc">
+                    Metodología probada en cientos de proyectos para asegurar que 
+                    nada pase desapercibido.
+                </p>
+            </div>
+
+            <div class="proceso-steps">
+                <div class="step" data-step="1">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Agendamiento</h3>
+                    <p>Coordinamos la visita en la fecha de entrega de tu propiedad con el constructor.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Inspección</h3>
+                    <p>Revisión exhaustiva de todos los sistemas con equipos especializados y checklists.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Informe</h3>
+                    <p>Documento detallado con fotos, hallazgos y recomendaciones priorizadas.</p>
+                </div>
+                <div class="step-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Seguimiento</h3>
+                    <p>Te acompañamos en la negociación con el constructor para que reparen los defectos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <div class="nosotros-content">
+                <div class="nosotros-image">
+                    <div class="image-frame">
+                        <div class="inspector-illustration">
+                            <div class="inspector-body">
+                                <div class="inspector-head">
+                                    <div class="helmet">
+                                        <div class="helmet-stripe"></div>
+                                    </div>
+                                    <div class="face"></div>
+                                </div>
+                                <div class="inspector-torso"></div>
+                                <div class="inspector-arm left">
+                                    <div class="clipboard">
+                                        <div class="paper"></div>
+                                    </div>
+                                </div>
+                                <div class="inspector-arm right"></div>
+                            </div>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="exp-number">15+</span>
+                            <span class="exp-text">Años de<br>Experiencia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-text">
+                    <span class="section-tag">Quiénes Somos</span>
+                    <h2>Expertos en control de calidad constructiva</h2>
+                    <p>
+                        Somos arquitectos e ingenieros especializados en la inspección de inmuebles 
+                        al momento de su entrega. Conocemos los defectos más comunes y sabemos 
+                        exactamente dónde buscar.
+                    </p>
+                    <p>
+                        Nuestro objetivo es proteger tu inversión y garantizar que recibas 
+                        la propiedad en las condiciones que te prometieron. No firmes la escritura 
+                        sin una inspección profesional.
+                    </p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <span>Arquitectos Certificados</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Seguro de Responsabilidad</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-camera"></i>
+                            <span>Evidencia Fotográfica</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-gavel"></i>
+                            <span>Validez Legal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contáctanos</span>
+                <h2 class="section-title">Agenda tu Inspección</h2>
+                <p class="section-desc">
+                    Completa el formulario y nos pondremos en contacto contigo 
+                    en menos de 24 horas.
+                </p>
+            </div>
+
+            <div class="contacto-grid">
+                <div class="contacto-form-wrapper">
+                    <form class="contacto-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo">Tipo de propiedad</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Selecciona...</option>
+                                <option value="casa">Casa</option>
+                                <option value="apartamento">Apartamento</option>
+                                <option value="oficina">Oficina</option>
+                                <option value="edificio">Edificio</option>
+                                <option value="local">Local Comercial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha">Fecha tentativa de entrega</label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje adicional</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Solicitar Cotización</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-notice">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Serás redirigido a Google Forms para completar el envío de forma segura.</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="contacto-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Teléfono</h4>
+                            <p>+1 (555) 123-4567</p>
+                            <p>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Correo</h4>
+                            <p>info@arquicheck.com</p>
+                            <p>citas@arquicheck.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Dirección</h4>
+                            <p>Av. Inspección 1234</p>
+                            <p>Ciudad, País</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Horario</h4>
+                            <p>Lun - Vie: 8:00 - 18:00</p>
+                            <p>Sáb: 9:00 - 14:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-hard-hat"></i>
+                        <span>ArquiCheck</span>
+                    </div>
+                    <p>
+                        Protegemos tu inversión inmobiliaria con inspecciones 
+                        profesionales y rigurosas.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Inspección de Pisos</a></li>
+                        <li><a href="#">Revisión Eléctrica</a></li>
+                        <li><a href="#">Tuberías y Agua</a></li>
+                        <li><a href="#">Cableado de Red</a></li>
+                        <li><a href="#">Acabados y Yeso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos de Servicio</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Garantía de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> ArquiCheck. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
