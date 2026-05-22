@@ -325,15 +325,16 @@ body {
 
 .inspection-scene {
     position: relative;
-    width: 300px;
-    height: 350px;
+    width: 430px;
+    height: 380px;
 }
 
 .building {
-    position: relative;
-    width: 180px;
-    height: 240px;
-    margin: 0 auto;
+    position: absolute;
+    width: 210px;
+    height: 255px;
+    left: 128px;
+    bottom: 42px;
 }
 
 .building-base {
@@ -347,6 +348,7 @@ body {
     padding: 5px;
     gap: 5px;
     backdrop-filter: blur(5px);
+    box-shadow: 0 24px 70px rgba(0,0,0,0.22);
 }
 
 .floor {
@@ -367,6 +369,8 @@ body {
     border: 1px solid rgba(244, 196, 48, 0.5);
     border-radius: 2px;
     animation: windowGlow 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
 }
 
 .door {
@@ -390,23 +394,327 @@ body {
 
 .roof {
     position: absolute;
-    top: -30px;
+    top: -38px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 35px solid rgba(255,255,255,0.15);
+    border-left: 116px solid transparent;
+    border-right: 116px solid transparent;
+    border-bottom: 42px solid rgba(255,255,255,0.16);
+    filter: drop-shadow(0 14px 18px rgba(0,0,0,0.16));
+}
+
+.ladder {
+    position: absolute;
+    left: 80px;
+    bottom: 38px;
+    width: 34px;
+    height: 252px;
+    border-left: 5px solid rgba(255,255,255,0.72);
+    border-right: 5px solid rgba(255,255,255,0.72);
+    transform: rotate(9deg);
+    transform-origin: bottom center;
+    z-index: 5;
+}
+
+.ladder span {
+    position: absolute;
+    left: -2px;
+    width: 28px;
+    height: 4px;
+    background: rgba(255,255,255,0.62);
+    border-radius: 3px;
+}
+
+.ladder span:nth-child(1) { top: 34px; }
+.ladder span:nth-child(2) { top: 82px; }
+.ladder span:nth-child(3) { top: 130px; }
+.ladder span:nth-child(4) { top: 178px; }
+
+.roof-inspector,
+.clipboard-inspector,
+.room-inspector {
+    position: absolute;
+    z-index: 6;
+}
+
+.roof-inspector {
+    left: 72px;
+    bottom: 145px;
+    width: 42px;
+    height: 86px;
+    animation: climbRoof 5s ease-in-out infinite;
+}
+
+.clipboard-inspector {
+    right: 14px;
+    bottom: 54px;
+    width: 58px;
+    height: 108px;
+    animation: clipboardNote 2.6s ease-in-out infinite;
+}
+
+.room-inspector {
+    width: 22px;
+    height: 38px;
+    bottom: 4px;
+}
+
+.person-head {
+    position: absolute;
+    left: 50%;
+    top: 13px;
+    width: 17px;
+    height: 17px;
+    background: #f5d0b0;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.roof-inspector .helmet,
+.clipboard-inspector .helmet,
+.room-inspector .helmet {
+    position: absolute;
+    left: 50%;
+    top: 4px;
+    width: 24px;
+    height: 12px;
+    background: var(--color-accent);
+    border-radius: 14px 14px 3px 3px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.person-body {
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    width: 24px;
+    height: 34px;
+    background: var(--color-secondary);
+    border-radius: 8px 8px 4px 4px;
+    transform: translateX(-50%);
+}
+
+.clipboard-inspector .person-body {
+    background: var(--color-primary-light);
+}
+
+.room-inspector .helmet {
+    top: 0;
+    width: 13px;
+    height: 7px;
+}
+
+.room-inspector .person-head {
+    top: 3px;
+    width: 9px;
+    height: 9px;
+}
+
+.room-inspector .person-body {
+    top: 13px;
+    width: 13px;
+    height: 19px;
+    background: rgba(26, 95, 122, 0.94);
+}
+
+.person-leg,
+.arm {
+    position: absolute;
+    background: rgba(255,255,255,0.78);
+    border-radius: 5px;
+}
+
+.person-leg {
+    top: 60px;
+    width: 7px;
+    height: 24px;
+}
+
+.leg-left { left: 12px; transform: rotate(8deg); }
+.leg-right { right: 12px; transform: rotate(-8deg); }
+
+.room-inspector .person-leg {
+    top: 31px;
+    width: 4px;
+    height: 9px;
+    background: rgba(255,255,255,0.72);
+}
+
+.room-inspector .leg-left { left: 8px; }
+.room-inspector .leg-right { right: 8px; }
+
+.room-inspector .arm {
+    top: 14px;
+    width: 3px;
+    height: 14px;
+    background: rgba(255,255,255,0.82);
+}
+
+.room-inspector .arm-left { left: 4px; }
+.room-inspector .arm-right { right: 4px; }
+
+.cable-tech {
+    left: 30px;
+    animation: inspectCables 3.2s ease-in-out infinite;
+}
+
+.bath-tech {
+    left: 6px;
+    animation: inspectBath 3.8s ease-in-out infinite;
+}
+
+.paint-tech {
+    left: 6px;
+    animation: inspectPaint 3.4s ease-in-out infinite;
+}
+
+.arm {
+    top: 34px;
+    width: 6px;
+    height: 23px;
+}
+
+.arm-left { left: 7px; transform: rotate(20deg); }
+.arm-right { right: 7px; transform: rotate(-25deg); }
+
+.clipboard-inspector .arm {
+    top: 36px;
+    background: rgba(255,255,255,0.82);
+    z-index: 2;
+}
+
+.clipboard-inspector .arm-left {
+    left: 10px;
+    transform: rotate(15deg);
+}
+
+.clipboard-inspector .arm-right {
+    right: 5px;
+    transform: rotate(-55deg);
+}
+
+.mini-clipboard {
+    position: absolute;
+    top: 29px;
+    right: -4px;
+    width: 25px;
+    height: 34px;
+    padding: 8px 4px 0;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+    transform: rotate(-8deg);
+}
+
+.mini-clipboard::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    width: 10px;
+    height: 4px;
+    background: var(--color-accent);
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
+.mini-clipboard span {
+    display: block;
+    height: 2px;
+    margin-bottom: 5px;
+    background: var(--color-primary);
+    border-radius: 2px;
+}
+
+.wire {
+    position: absolute;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 3px;
+    transform-origin: left center;
+}
+
+.wire-1 { width: 30px; left: 5px; top: 15px; transform: rotate(15deg); }
+.wire-2 { width: 24px; left: 10px; top: 29px; transform: rotate(-12deg); background: var(--color-secondary); }
+.wire-3 { width: 26px; left: 7px; top: 43px; transform: rotate(8deg); background: rgba(255,255,255,0.76); }
+
+.sink-icon {
+    position: absolute;
+    right: 6px;
+    bottom: 8px;
+    width: 24px;
+    height: 14px;
+    border: 3px solid rgba(255,255,255,0.72);
+    border-top: 0;
+    border-radius: 0 0 14px 14px;
+}
+
+.sink-icon::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: -18px;
+    width: 12px;
+    height: 14px;
+    border-top: 3px solid rgba(255,255,255,0.72);
+    border-right: 3px solid rgba(255,255,255,0.72);
+    border-radius: 0 8px 0 0;
+}
+
+.water-line {
+    position: absolute;
+    right: 16px;
+    top: 30px;
+    width: 3px;
+    height: 16px;
+    background: var(--color-primary-light);
+    border-radius: 3px;
+    animation: tinyWater 1.6s ease-in-out infinite;
+}
+
+.paint-roller {
+    position: absolute;
+    right: 9px;
+    top: 15px;
+    width: 23px;
+    height: 8px;
+    background: white;
+    border-radius: 5px;
+    animation: rollerMove 2.4s ease-in-out infinite;
+}
+
+.paint-roller::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 6px;
+    width: 12px;
+    height: 3px;
+    background: rgba(255,255,255,0.76);
+    transform: rotate(90deg);
+}
+
+.paint-swatch {
+    position: absolute;
+    right: 8px;
+    bottom: 9px;
+    width: 27px;
+    height: 27px;
+    background: rgba(255,255,255,0.26);
+    border-radius: 4px;
 }
 
 .magnifying-glass {
     position: absolute;
-    top: 50%;
-    right: 0;
+    top: 52%;
+    right: 26px;
     width: 80px;
     height: 80px;
     animation: glassMove 5s ease-in-out infinite;
+    z-index: 8;
 }
 
 .glass {
@@ -433,9 +741,45 @@ body {
 
 @keyframes glassMove {
     0%, 100% { transform: translate(0, 0); }
-    25% { transform: translate(-20px, -30px); }
-    50% { transform: translate(-40px, 0); }
+    25% { transform: translate(-22px, -34px); }
+    50% { transform: translate(-58px, -4px); }
     75% { transform: translate(-20px, 30px); }
+}
+
+@keyframes climbRoof {
+    0%, 100% { transform: translate(0, 38px); }
+    45% { transform: translate(12px, -18px); }
+    72% { transform: translate(22px, -70px); }
+}
+
+@keyframes clipboardNote {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes inspectCables {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }
+}
+
+@keyframes inspectBath {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
+@keyframes inspectPaint {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(16px); }
+}
+
+@keyframes tinyWater {
+    0%, 100% { height: 4px; opacity: 0.4; }
+    50% { height: 16px; opacity: 1; }
+}
+
+@keyframes rollerMove {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(26px); }
 }
 
 .checkmarks {
@@ -473,18 +817,19 @@ body {
 
 .scan-line {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    top: 82px;
+    left: 128px;
+    width: 210px;
     height: 3px;
     background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
     animation: scanMove 3s linear infinite;
     opacity: 0.6;
+    z-index: 4;
 }
 
 @keyframes scanMove {
-    0% { top: 0; }
-    100% { top: 100%; }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(255px); }
 }
 
 .scroll-indicator {
@@ -1378,6 +1723,62 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(90px);
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(232, 124, 62, 0.28));
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 0;
+}
+
+.step > * {
+    position: relative;
+    z-index: 1;
+}
+
+.process-active .step {
+    animation: stepSlideIn 0.65s ease forwards;
+}
+
+.process-active .step::before {
+    animation: stepFill 1.05s ease forwards;
+}
+
+.process-active .step[data-step="1"],
+.process-active .step[data-step="1"]::before {
+    animation-delay: 0s;
+}
+
+.process-active .step[data-step="2"] {
+    animation-delay: 1.15s;
+}
+
+.process-active .step[data-step="2"]::before {
+    animation-delay: 1.15s;
+}
+
+.process-active .step[data-step="3"] {
+    animation-delay: 2.3s;
+}
+
+.process-active .step[data-step="3"]::before {
+    animation-delay: 2.3s;
+}
+
+.process-active .step[data-step="4"] {
+    animation-delay: 3.45s;
+}
+
+.process-active .step[data-step="4"]::before {
+    animation-delay: 3.45s;
 }
 
 .step:hover {
@@ -1426,13 +1827,74 @@ body {
     color: var(--color-accent);
     font-size: 1.5rem;
     margin-top: 60px;
-    opacity: 0.7;
-    animation: arrowPulse 2s ease-in-out infinite;
+    opacity: 0;
+    transform: translateX(18px);
+}
+
+.process-active .step-arrow {
+    animation: arrowAppear 0.35s ease forwards, arrowPulse 2s ease-in-out infinite;
+}
+
+.process-active .step-arrow:nth-child(2) {
+    animation-delay: 0.98s, 1.28s;
+}
+
+.process-active .step-arrow:nth-child(4) {
+    animation-delay: 2.13s, 2.43s;
+}
+
+.process-active .step-arrow:nth-child(6) {
+    animation-delay: 3.28s, 3.58s;
+}
+
+@keyframes stepSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(90px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes stepFill {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes arrowAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(18px);
+    }
+    100% {
+        opacity: 0.85;
+        transform: translateX(0);
+    }
 }
 
 @keyframes arrowPulse {
     0%, 100% { transform: translateX(0); opacity: 0.7; }
     50% { transform: translateX(10px); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .step,
+    .step::before,
+    .step-arrow {
+        animation: none !important;
+        opacity: 1;
+        transform: none;
+    }
+
+    .step::before {
+        transform: scaleX(1);
+    }
 }
 
 /* Nosotros */
@@ -2141,6 +2603,12 @@ body {
         order: -1;
     }
 
+    .inspection-scene {
+        transform: scale(0.82);
+        transform-origin: center;
+        margin: -35px 0 -45px;
+    }
+
     .nosotros-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2235,6 +2703,11 @@ body {
 
     .hero-title {
         font-size: 2.5rem;
+    }
+
+    .inspection-scene {
+        transform: scale(0.68);
+        margin: -70px 0 -85px;
     }
 
     .section-title {

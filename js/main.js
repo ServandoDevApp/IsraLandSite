@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.step, .info-card, .contacto-form-wrapper, .nosotros-text, .nosotros-image');
+    const revealElements = document.querySelectorAll('.info-card, .contacto-form-wrapper, .nosotros-text, .nosotros-image');
     
     function checkReveal() {
         const triggerBottom = window.innerHeight * 0.85;
@@ -148,6 +148,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (statsTop < triggerBottom) {
                 animateStats();
             }
+        }
+
+        const procesoSection = document.querySelector('.proceso');
+        if (procesoSection && procesoSection.getBoundingClientRect().top < triggerBottom) {
+            procesoSection.classList.add('process-active');
         }
     }
 
