@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.servicio-card, .step, .info-card, .contacto-form-wrapper, .nosotros-text, .nosotros-image');
+    const revealElements = document.querySelectorAll('.step, .info-card, .contacto-form-wrapper, .nosotros-text, .nosotros-image');
     
     function checkReveal() {
         const triggerBottom = window.innerHeight * 0.85;
